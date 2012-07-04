@@ -1,4 +1,4 @@
-package gotools
+package godirs
 
 import (
   "bufio"

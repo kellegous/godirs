@@ -1,12 +1,12 @@
 package main
 
 import (
-  "github.com/kellegous/gotools"
+  "github.com/kellegous/godirs"
   "os"
 )
 
 func main() {
-  s, err := gotools.Run("/usr/local/go", "go")
+  s, err := godirs.Run("/usr/local/go", "go")
   if err != nil {
     panic(err)
   }
