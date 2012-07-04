@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-  s, err := gotools.run("/usr/local/go", "godoc")
+  s, err := gotools.Run("/usr/local/go", "godoc")
   if err != nil {
     panic(err)
   }

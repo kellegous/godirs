@@ -71,7 +71,7 @@ func projectPaths() ([]string, error) {
   return []string{}, nil
 }
 
-func run(goroot, tool string) (int, error) {
+func Run(goroot, tool string) (int, error) {
   if p, err := projectPaths(); err == nil {
     os.Setenv("GOPATH", strings.Join(p, ":"))
   }
