@@ -1,9 +1,12 @@
 package main
 
-import "os"
+import (
+  "github.com/kellegous/gotools"
+  "os"
+)
 
 func main() {
-  s, err := run("/usr/local/go", "godoc")
+  s, err := gotools.run("/usr/local/go", "godoc")
   if err != nil {
     panic(err)
   }
