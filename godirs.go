@@ -7,6 +7,7 @@ import (
   "fmt"
   "path/filepath"
   "os"
+  "os/exec"
   "strings"
   "syscall"
 )
@@ -69,6 +70,20 @@ func projectPaths() ([]string, error) {
   }
 
   return []string{}, nil
+}
+
+func FindGoRoot() (string, error) {
+  if p, err := exec.LookPath("go"); err == nil {
+    return filepath.Dir(filepath.Dir(p)), nil
+  }
+
+  p := "/usr/local/go"
+  _, err := os.Stat(p)
+  if err == nil {
+    return p, nil
+  }
+
+  return "", err
 }
 
 func Run(goroot, tool string) (int, error) {
