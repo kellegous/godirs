@@ -6,9 +6,9 @@ This makes it easier to manage go projects with local workspaces.
 
 ## Installing
 
-  go get \
-    github.com/kellegous/godirs/gaan \
-    github.com/kellegous/godirs/gaandoc
+    go get \
+      github.com/kellegous/godirs/gaan \
+      github.com/kellegous/godirs/gaandoc
 
 That will create bin/gaan and bin/gaandoc in your GOPATH. These tools are simple wrappers that invoke go and godoc, respectively. The environmental
 variable GOPATH is determined by looking for a .gaan file in the current
