@@ -6,7 +6,12 @@ import (
 )
 
 func main() {
-  s, err := godirs.Run("/usr/local/go", "go")
+  root, err := godirs.FindGoRoot()
+  if err != nil {
+    panic(err)
+  }
+
+  s, err := godirs.Run(root, "go")
   if err != nil {
     panic(err)
   }
